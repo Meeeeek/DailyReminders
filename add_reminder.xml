@@ -1,0 +1,79 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="michaelkim.dailyreminders.addReminder">
+
+    <!-- TODO: Update blank fragment layout -->
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/reminderName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="38dp"
+        android:layout_marginTop="50dp"
+        android:text="Reminder Name :"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:id="@+id/reminderNameField"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="27dp"
+        android:ems="10"
+        android:inputType="text"
+        android:layout_alignBaseline="@+id/reminderName"
+        android:layout_alignBottom="@+id/reminderName"
+        android:layout_toEndOf="@+id/reminderName" />
+
+    <TextView
+        android:id="@+id/reminderTD"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/reminderName"
+        android:layout_below="@+id/reminderNameField"
+        android:layout_marginTop="40dp"
+        android:text="Time/Date :" />
+
+    <Button
+        android:id="@+id/reminderTDButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/reminderNameField"
+        android:layout_below="@+id/reminderNameField"
+        android:layout_marginTop="17dp"
+        android:text="Pick a Time/Date" />
+
+    <CheckBox
+        android:id="@+id/reminderRecur"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/reminderTD"
+        android:layout_below="@+id/reminderTDButton"
+        android:layout_marginTop="133dp"
+        android:checked="false"
+        android:text="Recurring?"
+        android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/reminderRecurButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/reminderRecur"
+        android:layout_alignStart="@+id/reminderTDButton"
+        android:text="How Often?"
+        android:visibility="visible" />
+
+    <Button
+        android:id="@+id/createReminderButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Create"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="67dp" />
+</RelativeLayout>

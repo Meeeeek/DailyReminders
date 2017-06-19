@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="michaelkim.dailyreminders.homeScreen">
+
+
+        android:layout_width="1dp"
+        android:layout_height="495dp"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="8dp">
+
+        <ListView
+            android:id="@+id/reminderList"
+            android:layout_width="350dp"
+            android:layout_height="400dp"
+            tools:layout_editor_absoluteX="17dp"
+            tools:layout_editor_absoluteY="84dp"
+            android:layout_marginTop="15dp"
+            android:layout_below="@+id/dailyButton"
+            android:layout_centerHorizontal="true" />
+
+        <Button
+            android:id="@+id/yearlyButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/reminderList"
+            android:layout_alignEnd="@+id/reminderList"
+            android:layout_marginEnd="15dp"
+            android:onClick="addReminderY"
+            android:text="Yearly +"
+            android:textAlignment="center"
+            android:textSize="10sp"
+            android:textStyle="bold"
+            tools:layout_editor_absoluteX="261dp"
+            tools:layout_editor_absoluteY="16dp" />
+
+        <Button
+            android:id="@+id/dailyButton"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_alignStart="@+id/reminderList"
+            android:layout_alignTop="@+id/monthlyButton"
+            android:layout_marginStart="17dp"
+            android:onClick="addReminderD"
+            android:text="Daily +"
+            android:textAlignment="center"
+            android:textSize="10sp"
+            android:textStyle="bold"
+            tools:layout_editor_absoluteX="30dp"
+            tools:layout_editor_absoluteY="16dp" />
+
+        <Button
+            android:id="@+id/monthlyButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="24dp"
+            android:onClick="addReminderM"
+            android:text="Monthly +"
+            android:textAlignment="center"
+            android:textSize="10sp"
+            android:textStyle="bold"
+            tools:layout_editor_absoluteX="148dp"
+            tools:layout_editor_absoluteY="16dp" />
+</RelativeLayout>
