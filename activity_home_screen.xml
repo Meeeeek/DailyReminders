@@ -15,34 +15,34 @@
         <ListView
             android:id="@+id/reminderList"
             android:layout_width="350dp"
-            android:layout_height="400dp"
+            android:layout_height="375dp"
             tools:layout_editor_absoluteX="17dp"
             tools:layout_editor_absoluteY="84dp"
-            android:layout_marginTop="15dp"
-            android:layout_below="@+id/dailyButton"
+            android:layout_below="@+id/name"
             android:layout_centerHorizontal="true" />
 
         <Button
-            android:id="@+id/yearlyButton"
+            android:id="@+id/monthlyButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_above="@+id/reminderList"
-            android:layout_alignEnd="@+id/reminderList"
-            android:layout_marginEnd="15dp"
-            android:onClick="addReminderY"
-            android:text="Yearly +"
+            android:layout_marginEnd="16dp"
+            android:onClick="addReminderM"
+            android:text="Monthly +"
             android:textAlignment="center"
             android:textSize="10sp"
             android:textStyle="bold"
             tools:layout_editor_absoluteX="261dp"
-            tools:layout_editor_absoluteY="16dp" />
+            tools:layout_editor_absoluteY="16dp"
+            android:layout_alignBaseline="@+id/weeklyButton"
+            android:layout_alignBottom="@+id/weeklyButton"
+            android:layout_alignEnd="@+id/reminderList" />
 
         <Button
             android:id="@+id/dailyButton"
             android:layout_width="wrap_content"
             android:layout_height="50dp"
             android:layout_alignStart="@+id/reminderList"
-            android:layout_alignTop="@+id/monthlyButton"
+            android:layout_alignTop="@+id/weeklyButton"
             android:layout_marginStart="17dp"
             android:onClick="addReminderD"
             android:text="Daily +"
@@ -53,17 +53,58 @@
             tools:layout_editor_absoluteY="16dp" />
 
         <Button
-            android:id="@+id/monthlyButton"
+            android:id="@+id/weeklyButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="24dp"
-            android:onClick="addReminderM"
-            android:text="Monthly +"
+            android:onClick="addReminderW"
+            android:text="Weekly +"
             android:textAlignment="center"
             android:textSize="10sp"
             android:textStyle="bold"
             tools:layout_editor_absoluteX="148dp"
             tools:layout_editor_absoluteY="16dp" />
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="19dp"
+            android:text="NAME"
+            android:textStyle="bold"
+            android:layout_below="@+id/dailyButton"
+            android:layout_alignStart="@+id/dailyButton" />
+
+        <TextView
+            android:id="@+id/TD"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="WHEN"
+            android:textAlignment="center"
+            android:textStyle="bold"
+            android:layout_alignBaseline="@+id/name"
+            android:layout_alignBottom="@+id/name"
+            android:layout_toStartOf="@+id/weeklyButton"
+            android:layout_marginEnd="14dp" />
+
+        <TextView
+            android:id="@+id/sendEvery"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/weeklyButton"
+            android:layout_alignTop="@+id/TD"
+            android:text="SEND EVERY"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/howOften"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/sendEvery"
+            android:layout_marginStart="15dp"
+            android:layout_toEndOf="@+id/sendEvery"
+            android:text="HOW OFTEN"
+            android:textStyle="bold" />
 </RelativeLayout>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/TDLV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="19dp"
+        android:text="Time/Date"
+        android:layout_alignBaseline="@+id/advancedLV"
+        android:layout_alignBottom="@+id/advancedLV"
+        android:layout_toEndOf="@+id/reminderNameLV" />
+
+    <TextView
+        android:id="@+id/recurringLV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="x hours"
+        android:layout_marginStart="24dp"
+        android:layout_alignBaseline="@+id/TDLV"
+        android:layout_alignBottom="@+id/TDLV"
+        android:layout_toEndOf="@+id/TDLV" />
+
+    <Button
+        android:id="@+id/deleteReminderLV"
+        android:layout_width="60dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="11dp"
+        android:text="Delete"
+        android:textSize="8sp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true" />
+
+    <CheckBox
+        android:id="@+id/reminderNameLV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CheckBox"
+        android:layout_alignBaseline="@+id/TDLV"
+        android:layout_alignBottom="@+id/TDLV"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:id="@+id/advancedLV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="x days"
+        android:layout_alignBaseline="@+id/deleteReminderLV"
+        android:layout_alignBottom="@+id/deleteReminderLV"
+        android:layout_toStartOf="@+id/deleteReminderLV"
+        android:layout_marginEnd="16dp" />
+</RelativeLayout>

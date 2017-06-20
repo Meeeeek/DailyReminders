@@ -10,6 +10,16 @@
         android:layout_height="match_parent">
 
     <TextView
+        android:id="@+id/hoursText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/timeSpinner"
+        android:layout_marginStart="12dp"
+        android:layout_toEndOf="@+id/createReminderButton"
+        android:text="hours"
+        android:visibility="invisible" />
+
+    <TextView
         android:id="@+id/reminderName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -46,34 +56,129 @@
         android:layout_alignStart="@+id/reminderNameField"
         android:layout_below="@+id/reminderNameField"
         android:layout_marginTop="17dp"
+        android:onClick="TDPicker"
         android:text="Pick a Time/Date" />
 
     <CheckBox
         android:id="@+id/reminderRecur"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/reminderTD"
-        android:layout_below="@+id/reminderTDButton"
-        android:layout_marginTop="133dp"
         android:checked="false"
         android:text="Recurring?"
-        android:textAllCaps="false" />
-
-    <Button
-        android:id="@+id/reminderRecurButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/reminderRecur"
-        android:layout_alignStart="@+id/reminderTDButton"
-        android:text="How Often?"
-        android:visibility="visible" />
+        android:textAllCaps="false"
+        android:layout_below="@+id/selectedTime"
+        android:layout_alignStart="@+id/reminderTD"
+        android:layout_marginTop="20dp" />
 
     <Button
         android:id="@+id/createReminderButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Create"
-        android:layout_alignParentBottom="true"
+        android:layout_below="@+id/repeatEvery"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="67dp" />
+        android:layout_marginTop="24dp"
+        android:text="Create" />
+
+    <TextView
+        android:id="@+id/selectedTime"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/reminderTDButton"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="11dp"
+        android:textAlignment="center"
+        android:textSize="28sp" />
+
+    <TextView
+        android:id="@+id/every"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/reminderTD"
+        android:layout_below="@+id/reminderRecur"
+        android:layout_marginTop="25dp"
+        android:text="Every"
+        android:visibility="invisible" />
+
+    <Spinner
+        android:id="@+id/timeSpinner"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/every"
+        android:layout_toEndOf="@+id/reminderRecur"
+        android:visibility="invisible" />
+
+    <TextView
+        android:id="@+id/daysText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/hoursText"
+        android:layout_alignTop="@+id/hoursText"
+        android:text="days"
+        android:visibility="invisible" />
+
+    <TextView
+        android:id="@+id/dayNote"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/hoursText"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:text="* NOTE: All notifications sent every few days will be sent at 12:00 PM Noon"
+        android:textSize="10sp"
+        android:visibility="invisible" />
+
+    <CheckBox
+        android:id="@+id/advancedSettings"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/reminderRecur"
+        android:layout_below="@+id/dayNote"
+        android:layout_marginTop="16dp"
+        android:text="Advanced Settings" />
+
+    <TextView
+        android:id="@+id/repeatEvery"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:text="Repeat Every"
+        android:visibility="invisible"
+        android:layout_below="@+id/advancedSettings"
+        android:layout_alignStart="@+id/advancedSettings" />
+
+    <Spinner
+        android:id="@+id/repeatSpinner"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/repeatEvery"
+        android:layout_toEndOf="@+id/reminderName"
+        android:visibility="invisible" />
+
+    <TextView
+        android:id="@+id/daysText2"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/repeatSpinner"
+        android:layout_alignStart="@+id/hoursText"
+        android:text="days"
+        android:visibility="invisible" />
+
+    <TextView
+        android:id="@+id/monthsText2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/daysText2"
+        android:layout_alignTop="@+id/daysText2"
+        android:text="months"
+        android:visibility="invisible" />
+
+    <TextView
+        android:id="@+id/weeksText2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/daysText2"
+        android:layout_alignTop="@+id/daysText2"
+        android:text="weeks"
+        android:visibility="invisible" />
+
 </RelativeLayout>
